@@ -11,37 +11,22 @@ const counterReducer = (state = initialState, action)=>{
 
         };
     }
-    if(action.type === 'increase100'){
+    if(action.type === 'withdrawMon'){
         return {
-            counter: state.counter + action.amount,
+            counter: state.counter + -action.amount,
             showCounter:state.showCounter
 
 
         };
     }
-    if(action.type === 'increase200'){
+    
+    if(action.type === 'increase'){
         return {
             counter: state.counter + action.amount,
             showCounter:state.showCounter
-
-
         };
     }
-    if(action.type === 'increase500'){
-        return {
-            counter: state.counter + action.amount,
-          showCounter:state.showCounter
 
-        };
-    }
-    if(action.type === 'increase1000'){
-        return {
-            counter: state.counter + action.amount,
-            showCounter:state.showCounter
-
-
-        };
-    }
     if(action.type === 'decrement'){
         return {
             counter: state.counter + action.amount,
@@ -49,27 +34,7 @@ const counterReducer = (state = initialState, action)=>{
 
         }
     }
-    if(action.type === 'decrement2'){
-        return {
-            counter: state.counter +action.amount,
-            showCounter:state.showCounter
 
-        };
-    }
-    if(action.type === 'decrement5'){
-        return {
-            counter: state.counter +action.amount,
-            showCounter:state.showCounter
-
-        };
-    }
-    if(action.type === 'decrement10'){
-        return {
-            counter: state.counter +action.amount,
-            showCounter:state.showCounter
-
-        };
-    }
     if(action.type === 'toggle'){
         return {
             showCounter:!state.showCounter,
